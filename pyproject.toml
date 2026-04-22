@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-governance"
+version = "0.1.0"
+description = "CLI + library for auditing MCP server schemas: schema lint, security checks, and capability scoring."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Linus Teklenburg", email = "hey@linus-teklenburg.de" }]
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",
+    "pydantic>=2.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+mcp-audit = "mcp_governance.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_governance"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/mcp_governance"]
