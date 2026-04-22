@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "mcp-governance"
+name = "mcp-schema-auditor"
 version = "0.1.0"
 description = "CLI + library for auditing MCP server schemas: schema lint, security checks, and capability scoring."
 readme = "README.md"

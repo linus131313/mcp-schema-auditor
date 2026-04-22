@@ -1,4 +1,4 @@
-# mcp-governance-toolkit
+# mcp-schema-auditor
 
 **CLI + library for auditing MCP server schemas** — lint for quality, flag security risks, and score tool definitions against a structured capability rubric.
 
@@ -28,8 +28,8 @@ pip install mcp-governance
 Or from source:
 
 ```bash
-git clone https://github.com/linus131313/mcp-governance-toolkit
-cd mcp-governance-toolkit
+git clone https://github.com/linus131313/mcp-schema-auditor
+cd mcp-schema-auditor
 pip install -e ".[dev]"
 ```
 
